@@ -19,116 +19,112 @@ namespace Assignment3
             var Stu9 = new Student(4425,"Tracy", "Savethewhales1@yahoo.com", true);
             var Stu10 = new Student(3211,"Shelly", "By_the_seashore@yahoo.com", false);
 
-            Stu1.EmailAddress = "Who@yahoo.com";
-
             Console.WriteLine("ID: " + Stu1.ID);
             Console.WriteLine("Name: " + Stu1.Name);
-            if (Stu1.Visible == true)
+            try
             {
                 Console.WriteLine("Email Address: " + Stu1.EmailAddress);
             }
-            else
+            catch(Exception ex)
             {
-                Console.WriteLine("Email Address is classified");
+                Console.WriteLine(ex.Message);
             }
+
+            Stu1.Name = "Bobby";
+
+            Stu1.EmailAddress = "beenchanged@gmail.com";
+
+            Console.WriteLine("ID: " + Stu1.ID);
+            Console.WriteLine("Name: " + Stu1.Name);
+            try
+            {
+                Console.WriteLine("Email Address: " + Stu1.EmailAddress);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
 
             Console.WriteLine("ID: " + Stu2.ID);
             Console.WriteLine("Name: " + Stu2.Name);
-            if (Stu2.Visible == true)
+            try
             {
                 Console.WriteLine("Email Address: " + Stu2.EmailAddress);
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine("Email Address is classified");
+                Console.WriteLine(ex.Message);
             }
 
             Console.WriteLine("ID: " + Stu3.ID);
             Console.WriteLine("Name: " + Stu3.Name);
-            if (Stu3.Visible == true)
+            try
             {
                 Console.WriteLine("Email Address: " + Stu3.EmailAddress);
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine("Email Address is classified");
+                Console.WriteLine(ex.Message);
             }
 
             Console.WriteLine("ID: " + Stu4.ID);
             Console.WriteLine("Name: " + Stu4.Name);
-            if (Stu4.Visible == true)
+            try
             {
                 Console.WriteLine("Email Address: " + Stu4.EmailAddress);
             }
-            else
+            catch (Exception ex)
             {
-                Console.WriteLine("Email Address is classified");
+                Console.WriteLine(ex.Message);
             }
 
             Console.WriteLine("ID: " + Stu5.ID);
             Console.WriteLine("Name: " + Stu5.Name);
-            if (Stu5.Visible == true)
+            try
             {
                 Console.WriteLine("Email Address: " + Stu5.EmailAddress);
             }
-            else
-            {
-                Console.WriteLine("Email Address is classified");
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
 
             Console.WriteLine("ID: " + Stu6.ID);
             Console.WriteLine("Name: " + Stu6.Name);
-            if (Stu6.Visible == true)
+            try
             {
                 Console.WriteLine("Email Address: " + Stu6.EmailAddress);
             }
-            else
-            {
-                Console.WriteLine("Email Address is classified");
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             Console.WriteLine("ID: " + Stu7.ID);
             Console.WriteLine("Name: " + Stu7.Name);
-            if (Stu7.Visible == true)
+            try
             {
                 Console.WriteLine("Email Address: " + Stu7.EmailAddress);
             }
-            else
-            {
-                Console.WriteLine("Email Address is classified");
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
 
             Console.WriteLine("ID: " + Stu8.ID);
             Console.WriteLine("Name: " + Stu8.Name);
-            if (Stu8.Visible == true)
+            try
             {
                 Console.WriteLine("Email Address: " + Stu8.EmailAddress);
             }
-            else
-            {
-                Console.WriteLine("Email Address is classified");
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
 
             Console.WriteLine("ID: " + Stu9.ID);
             Console.WriteLine("Name: " + Stu9.Name);
-            if (Stu9.Visible == true)
+            try
             {
                 Console.WriteLine("Email Address: " + Stu9.EmailAddress);
             }
-            else
-            {
-                Console.WriteLine("Email Address is classified");
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
 
             Console.WriteLine("ID: " + Stu10.ID);
             Console.WriteLine("Name: " + Stu10.Name);
-            if (Stu10.Visible == true)
+            try
             {
                 Console.WriteLine("Email Address: " + Stu10.EmailAddress);
             }
-            else
-            {
-                Console.WriteLine("Email Address is classified");
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
         }
     }
 }

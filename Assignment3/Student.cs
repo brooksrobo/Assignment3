@@ -46,6 +46,11 @@ namespace Assignment3
                 {
                     throw new Exception("Name required.");
                 }
+                if (_name != null)
+                {
+                    Console.WriteLine("Changing name from " + _name);
+                    Console.WriteLine("to " + value);
+                }
                 _name = value;
             }
 
@@ -61,12 +66,24 @@ namespace Assignment3
         }
         public string EmailAddress
         {
-            get { return _emailAddress; }
+            get
+            {
+                if(_visible == true)
+                {
+                    return _emailAddress;
+                }
+                return "Classified information";
+            }
 
             set
             {
                 if (Regex.IsMatch(value, "^([0-9a-zA-Z]([-.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$"))
                 {
+                    if(_emailAddress != null)
+                    {
+                        Console.WriteLine("Changing email from " + _emailAddress);
+                        Console.WriteLine("to " + value);
+                    }
                     _emailAddress = value;
                 }
                 else
