@@ -12,37 +12,32 @@ namespace Assignment3
         private double _iD;
         private string _name;
         private string _emailAddress;
+        private bool _visible;
 
-        public Student()
+        public const string DefaultName = "John Doe";
+        public Student(string name)
         {
-            this._iD = 0;
-            this._name = "John Doe";
-            this._emailAddress = "John.Doe@gmail.com";
+            this._name = name;
+
         }
 
-        public Student(double iD, string name, string _emailAddress)
+        public Student(double _iD, string name, string _emailAddress, bool _visible)
         {
-            this._iD = iD;
+
+            this._iD = _iD;
             this._name = name;
-            this._emailAddress = EmailAddress;
+            this._emailAddress = _emailAddress;
+            this._visible = _visible;
         }
 
         public double ID
         {
             get { return _iD; }
-
-            set
-            {
-                if (double.IsNaN(value))
-                {
-                    throw new Exception("ID must be a number");
-                }
-                _iD = value;
-            }
         }
 
         public string Name
         {
+
             get { return _name; }
 
             set
@@ -55,11 +50,19 @@ namespace Assignment3
             }
 
         }
+        public bool Visible
+        {
+            get { return _visible; }
+
+            set
+            {
+                _visible = value;
+            }
+        }
         public string EmailAddress
         {
-            
             get { return _emailAddress; }
-           
+
             set
             {
                 if (Regex.IsMatch(value, "^([0-9a-zA-Z]([-.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$"))
@@ -72,5 +75,7 @@ namespace Assignment3
                 }
             }
         }
+
+
     }
 }
