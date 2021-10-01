@@ -19,6 +19,8 @@ namespace Assignment3
             var Stu9 = new Student(4425,"Tracy", "Savethewhales1@yahoo.com", true);
             var Stu10 = new Student(3211,"Shelly", "By_the_seashore@yahoo.com", false);
 
+            Stu1.EmailAddress = "Who@yahoo.com";
+
             Console.WriteLine("ID: " + Stu1.ID);
             Console.WriteLine("Name: " + Stu1.Name);
             if (Stu1.Visible == true)
