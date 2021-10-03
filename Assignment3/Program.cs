@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Assignment3
 {
@@ -19,6 +20,28 @@ namespace Assignment3
             var Stu9 = new Student(4425,"Tracy", "Savethewhales1@yahoo.com", true);
             var Stu10 = new Student(3211,"Shelly", "By_the_seashore@yahoo.com", false);
 
+
+            var students = new List<Student>() { Stu1, Stu2, Stu3, Stu4, Stu5, Stu6, Stu7, Stu8, Stu9, Stu10 };
+
+            foreach (var Student in students)
+            {
+                Console.WriteLine("ID: " + Student.ID);
+                Console.WriteLine("Name: " + Student.Name);
+                try
+                {
+                    Console.WriteLine("Email Address: " + Student.EmailAddress);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+
+            }
+            Stu1.Name = "Bobby";
+
+            Stu1.EmailAddress = "beenchanged@gmail.com";
+
             Console.WriteLine("ID: " + Stu1.ID);
             Console.WriteLine("Name: " + Stu1.Name);
             try
@@ -30,101 +53,6 @@ namespace Assignment3
                 Console.WriteLine(ex.Message);
             }
 
-            Stu1.Name = "Bobby";
-
-            Stu1.EmailAddress = "beenchanged@gmail.com";
-
-            Console.WriteLine("ID: " + Stu1.ID);
-            Console.WriteLine("Name: " + Stu1.Name);
-            try
-            {
-                Console.WriteLine("Email Address: " + Stu1.EmailAddress);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-
-            Console.WriteLine("ID: " + Stu2.ID);
-            Console.WriteLine("Name: " + Stu2.Name);
-            try
-            {
-                Console.WriteLine("Email Address: " + Stu2.EmailAddress);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-            Console.WriteLine("ID: " + Stu3.ID);
-            Console.WriteLine("Name: " + Stu3.Name);
-            try
-            {
-                Console.WriteLine("Email Address: " + Stu3.EmailAddress);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-            Console.WriteLine("ID: " + Stu4.ID);
-            Console.WriteLine("Name: " + Stu4.Name);
-            try
-            {
-                Console.WriteLine("Email Address: " + Stu4.EmailAddress);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-            Console.WriteLine("ID: " + Stu5.ID);
-            Console.WriteLine("Name: " + Stu5.Name);
-            try
-            {
-                Console.WriteLine("Email Address: " + Stu5.EmailAddress);
-            }
-            catch (Exception ex) { Console.WriteLine(ex.Message); }
-
-            Console.WriteLine("ID: " + Stu6.ID);
-            Console.WriteLine("Name: " + Stu6.Name);
-            try
-            {
-                Console.WriteLine("Email Address: " + Stu6.EmailAddress);
-            }
-            catch (Exception ex) { Console.WriteLine(ex.Message); }
-            Console.WriteLine("ID: " + Stu7.ID);
-            Console.WriteLine("Name: " + Stu7.Name);
-            try
-            {
-                Console.WriteLine("Email Address: " + Stu7.EmailAddress);
-            }
-            catch (Exception ex) { Console.WriteLine(ex.Message); }
-
-            Console.WriteLine("ID: " + Stu8.ID);
-            Console.WriteLine("Name: " + Stu8.Name);
-            try
-            {
-                Console.WriteLine("Email Address: " + Stu8.EmailAddress);
-            }
-            catch (Exception ex) { Console.WriteLine(ex.Message); }
-
-            Console.WriteLine("ID: " + Stu9.ID);
-            Console.WriteLine("Name: " + Stu9.Name);
-            try
-            {
-                Console.WriteLine("Email Address: " + Stu9.EmailAddress);
-            }
-            catch (Exception ex) { Console.WriteLine(ex.Message); }
-
-            Console.WriteLine("ID: " + Stu10.ID);
-            Console.WriteLine("Name: " + Stu10.Name);
-            try
-            {
-                Console.WriteLine("Email Address: " + Stu10.EmailAddress);
-            }
-            catch (Exception ex) { Console.WriteLine(ex.Message); }
         }
     }
 }

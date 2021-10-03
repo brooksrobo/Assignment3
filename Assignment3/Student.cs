@@ -59,7 +59,7 @@ namespace Assignment3
         {
             get { return _visible; }
 
-            set
+            private set
             {
                 _visible = value;
             }
