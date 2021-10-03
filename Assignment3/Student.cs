@@ -11,8 +11,10 @@ namespace Assignment3
     {
         private double _iD;
         private string _name;
+        private string _major;
         private string _emailAddress;
         private bool _visible;
+        
 
         public const string DefaultName = "John Doe";
         public Student(string name)
@@ -21,11 +23,12 @@ namespace Assignment3
 
         }
 
-        public Student(double _iD, string name, string _emailAddress, bool _visible)
+        public Student(double _iD, string _name, string _emailAddress, string _major, bool _visible)
         {
 
             this._iD = _iD;
-            this._name = name;
+            this._name = _name;
+            this._major = _major;
             this._emailAddress = _emailAddress;
             this._visible = _visible;
         }
@@ -52,6 +55,27 @@ namespace Assignment3
                     Console.WriteLine("to " + value);
                 }
                 _name = value;
+            }
+
+        }
+
+        public string Major
+        {
+
+            get { return _major; }
+
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new Exception("Major required.");
+                }
+                if (_major != null)
+                {
+                    Console.WriteLine("Changing name from " + _major);
+                    Console.WriteLine("to " + value);
+                }
+                _major = value;
             }
 
         }
